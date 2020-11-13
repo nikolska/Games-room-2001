@@ -14,4 +14,4 @@ if he rolls an 11, he multiplies the current number of points by that value.
 
 The first player to score 2001 points wins.
 
-To run the program, just open the "main.py" file in the console or open the "main.py" file in the IDE and press "run main".
+To run the program, just open the "main.py" or the "mod1.py" file in the console or open the "main.py" or the "mod1.py" file in the IDE and press "run 'file'".
