@@ -29,13 +29,30 @@ def game():
     '''
     user_points = 0
     computer_points = 0
-    while user_points < 2001 or computer_points < 2001:
+    while user_points < 200 or computer_points < 200:
         user_roll = user_roll_the_dice()
-        user_points += user_roll
+        if user_roll == 7:
+            user_points //= 7
+        elif user_roll == 11:
+            user_points *= 11
+        else:
+            user_points += user_roll
         print('user_points =', user_points)
+        if user_points >= 200:
+            print('You win!')
+            break
+
         computer_roll = comp_roll_the_dice()
-        computer_points += computer_roll
+        if computer_roll == 7:
+            computer_points //= 7
+        elif computer_roll == 11:
+            computer_points *= 11
+        else:
+            computer_points += computer_roll
         print('computer_points =', computer_points)
+        if computer_points >= 200:
+            print('I win!')
+            break
 
 
 if __name__ == '__main__':
