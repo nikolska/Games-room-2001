@@ -1,24 +1,42 @@
 import random
 
-user_points = 0
-computer_points = 0
+
+def user_roll_the_dice():
+    '''
+    Function simulates rolling two six-sided dice.
+    :return: the amount of rolls, type - int
+    '''
+    print('Press ENTER to roll the dice')
+    input()
+    roll_twice = [random.randint(1, 6), random.randint(1, 6)]
+    return sum(roll_twice)
 
 
-def roll_the_dice():
+def comp_roll_the_dice():
     '''
-    Function roll_the_dice simulates throwing two six-sided dice.
-    :return: the amount of throws, type - int
+    Function simulates rolling two six-sided dice.
+    :return: the amount of rolls, type - int
     '''
-    roll_twice = []
-    for _ in range(2):
-        roll = random.randint(1, 6)
-        roll_twice.append(roll)
+    roll_twice = [random.randint(1, 6), random.randint(1, 6)]
     return sum(roll_twice)
 
 
 def game():
-    pass
+    '''
+    The main function of the game "2001".
+    :user_points type: int
+    :computer_points type: int
+    '''
+    user_points = 0
+    computer_points = 0
+    while user_points < 2001 or computer_points < 2001:
+        user_roll = user_roll_the_dice()
+        user_points += user_roll
+        print('user_points =', user_points)
+        computer_roll = comp_roll_the_dice()
+        computer_points += computer_roll
+        print('computer_points =', computer_points)
 
 
-# if __name__ == '__main__':
-#     game()
+if __name__ == '__main__':
+    game()
