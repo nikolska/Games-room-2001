@@ -2,7 +2,7 @@
 
 Each player starts with 0 points.
 
-On his turn, the player rolls 2 dice (standard six-sided dice).
+On his turn, the player rolls 2 dice (standard six-sided dice or a dice from the set: D3, D4, D6, D8, D10, D12, D20, D100.).
 
 The number of spots thrown is added to the total number of points.
 
