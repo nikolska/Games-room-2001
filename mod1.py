@@ -8,8 +8,12 @@ def user_roll_the_dice():
     :return: the amount of rolls, type - int
     '''
     text = 'Choose a dice from the set: D3, D4, D6, D8, D10, D12, D20, D100.'
-    roll_twice = [roll_the_dice(input(text).upper()), roll_the_dice(input(text).upper())]
-    return sum(roll_twice)
+    while True:
+        try:
+            roll_twice = [roll_the_dice(input(text).upper()), roll_the_dice(input(text).upper())]
+            return sum(roll_twice)
+        except Exception:
+            print('not valid')
 
 
 def computer_roll_the_dice():
